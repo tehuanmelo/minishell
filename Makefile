@@ -1,14 +1,15 @@
 NAME = minishell
 SRCFILES =\
+get_tokens.c\
 main.c
 vpath %.c src
 OBJPATH = obj/
-LIBFT = inc/libft
+LIBFT = src/libft
 OBJ = $(patsubst %.c, $(OBJPATH)%.o, $(SRCFILES))
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra 
+# CFLAGS = -Wall -Werror -Wextra -g3 -fsanitize=address
 # CFLAGS = -Wall -Werror -Wextra -g3 
-# CFLAGS = -Wall -Werror -Wextra -pthread -g3 -fsanitize=address
 # CFLAGS = -Wall -Werror -Wextra -pthread -g3 -fsanitize=thread
 
 .SILENT:
